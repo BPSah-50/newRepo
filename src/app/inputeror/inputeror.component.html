@@ -1,0 +1,22 @@
+<form class="container" [formGroup]="loginForm">
+  <mat-icon class="ikon">account_circle</mat-icon>
+  <mat-form-field class="form-field">
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="Username" formControlName='userName'>
+    <mat-error *ngIf="loginForm.get('userName').hasError('required')">Username is required.</mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field class="form-field">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="Password" formControlName='password' #passwod>
+    <mat-error *ngIf="loginForm.get('password').hasError('required')">Password is required.</mat-error>
+    <mat-hint align="end">{{passwod.value.length}}/6</mat-hint>
+  </mat-form-field>
+  <button mat-raised-button color="primary" class="login-button">Sign In</button>
+  <div class="chck">
+  <mat-checkbox class="example-margin">Remember me</mat-checkbox>
+  <a href="#" class="float-right" routerLink="/getpasswd" routerLinkActive="active">Forgot Password?</a>
+  </div><hr>
+  <p class="text-center"><a href="#" routerLink="/signup" routerLinkActive="active">Create an Account</a></p>
+</form>

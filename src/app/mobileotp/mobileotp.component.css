@@ -1,0 +1,26 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 30%;
+    margin-left: 35%;
+    box-shadow: 5px 5px 20px;
+    padding: 48px;
+    height: 550px;
+}
+
+.example-full-width {
+    width: 90%;
+}
+
+.txt {
+    background-color: powderblue;
+    margin-top: 15px;
+}
+
+h6 {
+    text-align: center;
+}
+
+#spc {
+    float: right;
+}

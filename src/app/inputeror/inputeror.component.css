@@ -1,0 +1,26 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.container {
+    width: 30%;
+    height: 75%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px;
+}
+
+.form-field {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 330px;
+    display: block !important;
+}
+
+.material-icons {
+    font-size: 80px;
+    line-height: 1.5;
+    color: maroon;
+    margin-left: 150px;
+}
+
+.chck {
+    margin-top: 25px;
+}

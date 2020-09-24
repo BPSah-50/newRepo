@@ -1,0 +1,51 @@
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>success !</strong> Your Data has been entered successfully.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="login-form">
+  <form>
+    <h2 class="text-center">Log in</h2>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Username"
+        required="required"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        required="required"
+      />
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-block">Log in</button>
+    </div>
+    <div class="clearfix">
+      <label class="float-left form-check-label"
+        ><input type="checkbox" /> Remember me</label
+      >
+      <a
+        href="#"
+        class="float-right"
+        routerLink="/getpasswd"
+        routerLinkActive="active"
+        >Forgot Password?</a
+      >
+    </div>
+  </form>
+  <p class="text-center">
+    <a href="#" routerLink="/signup" routerLinkActive="active"
+      >Create an Account</a
+    >
+  </p>
+</div>
+
+<!-- ==================================================================================== -->
+<button type="button" class="btn btn-primary" (click)="showToastr()">Primary</button>

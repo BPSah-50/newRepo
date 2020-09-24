@@ -1,0 +1,32 @@
+<div class="example-form">
+<form class="example-form1">
+<h6>Validate OTP (One Time Password)</h6><hr>
+<p>A new security sysatem has been sent enabled for you. Please register your phone to continue.</p>
+  <mat-form-field class="example-full-width">
+    <mat-label>Phone</mat-label>
+    <span matPrefix>+91 &nbsp;</span>
+    <input type="tel" matInput placeholder="123-555-1234" [formControl]="mobileotp" maxlength="10" #mobno>
+    <mat-hint align="end">{{mobno.value.length}}/10</mat-hint>
+    <mat-error *ngIf="mobileotp.hasError('required')">Mobile is required.</mat-error>
+   <!--<mat-error *ngIf="mobileotp.hasError('mobno') && !mobileotp.hasError('required')">--> 
+  </mat-form-field>
+  <div class="example-button-row">
+  <button mat-raised-button color="primary">Send OTP</button>
+  </div>
+  <div class="txt">A OTP (ONE TIME PASSWORD) has been sent to +91-000-000-0000. Please enter the OTP in the field below to verify your phone. </div>
+
+
+<mat-form-field class="example-full-width">
+    <mat-label>Verify Code</mat-label>
+    <input type="tel" matInput placeholder="Verify Code" [formControl]="mobileotp">
+    <mat-error *ngIf="mobileotp.hasError('required')">Enter the OTP</mat-error>
+   <!--<mat-error *ngIf="mobileotp.hasError('mobno') && !mobileotp.hasError('required')">--> 
+  </mat-form-field>
+
+  <div class="example-button-row">
+  <button mat-raised-button color="primary">Validate</button>
+  <button id="spc" mat-raised-button color="primary">Resend OTP</button>
+  </div>
+
+</form>
+</div>
